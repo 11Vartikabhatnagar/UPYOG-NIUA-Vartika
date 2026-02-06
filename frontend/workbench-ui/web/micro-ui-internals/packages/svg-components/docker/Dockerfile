@@ -11,7 +11,7 @@ COPY ${WORK_DIR} .
 RUN  yarn install \
     && yarn build-storybook
 
-FROM nginx:mainline-alpine
+FROM nginx:1.29.5-alpine3.23
 ENV WORK_DIR=/var/storybook-svg
 
 RUN mkdir -p ${WORK_DIR}
